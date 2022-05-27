@@ -4,3 +4,8 @@
     padding: 0;    
 }
 */
+header {
+    position: relative;
+    top: 50%;
+    margin: 0 auto;
+}

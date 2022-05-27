@@ -30,18 +30,31 @@ function displayList() {
 function editTask(taskIndex) {
   savedIndex = taskIndex;
   todoText.value = todoArray[taskIndex];
-  addbutton.style.display = "none";
+  addtaskbutton.style.display = "none";
   savedbutton.style.display = "inline-block";
 }
 
 function deleteTask(taskIndex) {
   todoArray.splice(taskIndex, 1);
+  todoText.value = "";
   displayList();
 }
 
 savedbutton.addEventListener("click", (prevent) => {
   prevent.preventDefault();
-  todoArray.splice(savedIndex, 1, todoText.value);
+ /**/ if (todoText.value != null && todoText.value != "" ) {
+    console.log("if called")
+    todoArray.splice(savedIndex, 1, todoText.value);
+    //todoText.value = "";
+    displayList();
+  } else {
+      alert("Blank not allowed; Please, click on delete instead")
+      editTask(savedIndex)
+  }
+  //todoArray.splice(savedIndex, 1, todoText.value);
+ // todoText.value = "";
+ // displayList();
   todoText.value = "";
-  displayList();
+  addtaskbutton.style.display = "inline-block";
+  savedbutton.style.display = "none";
 });
