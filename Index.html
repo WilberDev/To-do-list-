@@ -6,29 +6,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./CSS.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <title>To Do list</title>
 </head>
 
 <body>
     <main>
         <header>
-            <h1>This is a To-Do list maker!</h1>
+            <h1>This is a "To-Do" list maker!</h1>
         </header>
-        <section>
+        <section class="main-section">
+            <!---->
+
             <h3>Please insert your tasks </h3>
+
             <form action="">
                 <label for="Tasks">
-                    <input type="text" id="Todo-text" placeholder="Add To-Dos" />
-                    <button type="submit" id = "add-btn" > Add</button>
-                    <button type="submit" id = "Save-btn" style="display: none;"> Save</button>
+                    <input type="text" id="Todo-text" class="todo-text" placeholder="Add To-Dos" />
+                    <button type="submit" id="add-btn" class="add-btn"> Add</button>
+                    <button type="submit" id="Save-btn" class="Save-btn" style="display: none;"> Save</button>
                 </label>
             </form>
-            <section id="list-space">
+            <section id="list-space" class="list-space">
 
             </section>
         </section>
     </main>
-    <script src = "JS.js"> </script>
+    <!--
+        
+        <footer class="footer">
+            <a href="http://https://github.com/WilberDev"> github.com/WilberDev</a>
+        </footer>
+    -->
+    <script src="JS.js"> </script>
 </body>
 
 </html>

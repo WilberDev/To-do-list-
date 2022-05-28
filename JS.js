@@ -5,6 +5,7 @@ const spaceforlist = document.getElementById("list-space");
 
 let todoArray = [];
 let savedIndex = 0;
+
 addtaskbutton.addEventListener("click", (prevent) => {
   prevent.preventDefault();
 
@@ -19,11 +20,10 @@ function displayList() {
   let writeOnHTML = "";
   todoArray.forEach((task, index) => {
     writeOnHTML += `
-        <section>
             <p> ${index + 1} ${task}</p>
-            <button onclick = "editTask(${index})" type="submit" id = "edit-btn"> Edit</button>
-            <button onclick = "deleteTask(${index})" type="submit" id = "delete-btn"> Delete</button>
-        </section>`;
+            <button onclick = "editTask(${index})" type="submit" id = "edit-btn" class = "edit-btn" > Edit</button>
+            <button onclick = "deleteTask(${index})" type="submit" id = "delete-btn" class = "delete-btn"> Delete</button>
+    `
   });
   spaceforlist.innerHTML = writeOnHTML;
 }
@@ -42,18 +42,18 @@ function deleteTask(taskIndex) {
 
 savedbutton.addEventListener("click", (prevent) => {
   prevent.preventDefault();
- /**/ if (todoText.value != null && todoText.value != "" ) {
-    console.log("if called")
+  /**/ if (todoText.value != null && todoText.value != "") {
+    console.log("if called");
     todoArray.splice(savedIndex, 1, todoText.value);
     //todoText.value = "";
     displayList();
   } else {
-      alert("Blank not allowed; Please, click on delete instead")
-      editTask(savedIndex)
+    alert("Blank not allowed; Please, click on delete instead");
+    editTask(savedIndex);
   }
   //todoArray.splice(savedIndex, 1, todoText.value);
- // todoText.value = "";
- // displayList();
+  // todoText.value = "";
+  // displayList();
   todoText.value = "";
   addtaskbutton.style.display = "inline-block";
   savedbutton.style.display = "none";
