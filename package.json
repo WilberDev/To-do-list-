@@ -1,0 +1,22 @@
+{
+  "name": "miniprojecst",
+  "version": "1.0.0",
+  "description": "This is a ToDo app",
+  "main": "index.js",
+  "scripts": {
+    "test": "test: jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WilberDev/To-do-list-.git"
+  },
+  "author": "Wilber Camilo <wilbecamilo00@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/WilberDev/To-do-list-/issues"
+  },
+  "homepage": "https://github.com/WilberDev/To-do-list-#readme",
+  "dependencies": {
+    "jasmine": "^4.1.0"
+  }
+}
